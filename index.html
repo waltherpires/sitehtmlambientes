@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-with, initial-scale=1.0" />
+        <title>Projeto03</title>
+        <body>
+            <div>
+                <p1>Multiplicação</p1>
+                <h1>Painel de Operações</h1>
+                <label for="multiplicacao-numero1">Número 1:</label>
+                <input type="number" id="multiplicacao-numero1"><p> <p></p>
+        
+                <label for="multiplicacao-numero2">Número 2:</label>
+                <input type="number" id="multiplicacao-numero2"><p> <p></p>
+        
+                <label for="multiplicacao-resultado">Resultado:</label>
+                <input type="text" id="multiplicacao-resultado" readonly>
+        
+                <br><br>
+        
+                <button onclick="multiplicacao()">Multiplicação</button>
+                <button onclick="exponenciacao()">Exponenciação</button>
+                <button onclick="comparacao()">Comparação</button>
+            </div>
+        
+            <div>
+                <br><br>
+                <p1>Exponenciação</p1>
+                <h1>Painel de Operações</h1>
+                <label for="exponenciacao-numero1">Número 1:</label>
+                <input type="number" id="exponenciacao-numero1"><p> <p></p>
+        
+                <label for="exponenciacao-numero2">Número 2:</label>
+                <input type="number" id="exponenciacao-numero2"><p> <p></p>
+        
+                <label for="exponenciacao-resultado">Resultado:</label>
+                <input type="text" id="exponenciacao-resultado" readonly>
+        
+                <br><br>
+        
+                <button onclick="multiplicacao()">Multiplicação</button>
+                <button onclick="exponenciacao()">Exponenciação</button>
+                <button onclick="comparacao()">Comparação</button>
+            </div>
+        
+            <div>
+                <br><br>
+                <p>Comparação</p>
+                <h1>Painel de Operações</h1>
+                <label for="comparacao-numero1">Número 1:</label>
+                <input type="number" id="comparacao-numero1"><p> <p></p>
+        
+                <label for="comparacao-numero2">Número 2:</label>
+                <input type="number" id="comparacao-numero2"><p> <p></p>
+        
+                <label for="comparacao-resultado">Resultado:</label>
+                <input type="text" id="comparacao-resultado" readonly>
+        
+                <br><br>
+        
+                <button onclick="multiplicacao()">Multiplicação</button>
+                <button onclick="exponenciacao()">Exponenciação</button>
+                <button onclick="comparacao()">Comparação</button>
+            </div>
+        
+            <script>
+                function multiplicacao() {
+                    var num1 = parseFloat(document.getElementById("multiplicacao-numero1").value);
+                    var num2 = parseFloat(document.getElementById("multiplicacao-numero2").value);
+                    var resultado = num1 * num2;
+                    document.getElementById("multiplicacao-resultado").value = resultado;
+                }
+        
+                function exponenciacao() {
+                    var num1 = parseFloat(document.getElementById("exponenciacao-numero1").value);
+                    var num2 = parseFloat(document.getElementById("exponenciacao-numero2").value);
+                    var resultado = Math.pow(num1, num2);
+                    document.getElementById("exponenciacao-resultado").value = resultado;
+                }
+        
+                function comparacao() {
+                    var num1 = parseFloat(document.getElementById("comparacao-numero1").value);
+                    var num2 = parseFloat(document.getElementById("comparacao-numero2").value);
+                    var resultado = num1 > num2 ? num1 + " é maior que " + num2 : num2 + " é maior que " + num1;
+                    document.getElementById("comparacao-resultado").value = resultado;
+                }
+            </script>
+
+
+        </body>
+    </head>
+</html>
